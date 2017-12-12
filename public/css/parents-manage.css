@@ -1,0 +1,10 @@
+.page-header {
+    background-image: none;
+    background-color: rgb(177, 198, 223);
+    color: white;
+
+}
+
+body {
+    background-image: url("../images/dancer-art.jpg");
+}
