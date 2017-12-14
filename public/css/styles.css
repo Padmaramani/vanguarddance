@@ -1,9 +1,9 @@
 body, html {
     height: 100%;
 }
-.bg { 
+.index-bg { 
     /* The image used */
-    background-image: url("../../images/bg.jpg");
+    background-image: url("../images/bg.jpg");
 
     /* Full height */
     height: 100%; 
@@ -13,3 +13,5 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
