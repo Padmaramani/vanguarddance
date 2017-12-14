@@ -5,31 +5,77 @@
   <title>Pavlova</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="parent-manage.css">
+  <link rel="stylesheet" type="text/css" href="css/parents-manage.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 
 </head>
-<body background="../images/dancer-art.jpg">
+<body>
 
-<div class="bg"></div>
+    <div class="bg">
 
-<div class="page-header">
-  <h1>Parent management portal</h1>
-</div>
-
+            
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html"><b>Parent management portal</b></a>
+                    </div>    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#">Dancers</a></li>
+                        <li><a href="#">Parents</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="dancers-manage.html">Manage Dancers</a></li>
+                            <li><a href="parents-manage.html">Manage Parents</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+                </nav>
+        
+            
+     </div> <!-- end class="bg" -->
 <div class="row">
         
+             
               <!-- First of two columns -->
-              <div class="col-md-6">
+              <div class="col-md-4">
                  <button type="button" class="btn btn-primary btn-lg btn-block">Add a new Parent</button>
               </div>
         
               <!-- Second of two columns -->
-              <div class="col-md-6">
+              <div class="col-md-8">
               </div>
-        
-</div>
+ </div>
+
+ <div class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Update parent info</h5>
+            </div>
+            <div class="modal-body" id="updtform">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ <div id="dynamicTable">
+ </div>
+
+
+<script type="text/javascript" src="js/parentsmanage.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
   </body>
+</html>

@@ -14,15 +14,16 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
         },
         is_active: {
-            type: BOOLEAN,
+            type: DataTypes.BOOLEAN,
             defaultValue: true,
             allowNull: false
         }
       // Giving the Author model a name of type STRING
      
     });
-  
+
     
+        
     Dancer.associate = function(models) {
         // Associating Author with Posts
         // When an Author is deleted, also delete any associated Posts
@@ -31,6 +32,5 @@ module.exports = function(sequelize, DataTypes) {
         });
       };
     
-      return Dancer;
-  
-  };
+  return Dancer;
+};

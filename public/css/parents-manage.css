@@ -6,5 +6,9 @@
 }
 
 body {
-    background-image: url("../images/dancer-art.jpg");
+    background-color: lightblue;
+}
+
+.navbar-inverse {
+    background-color: rgb(117, 71, 190);
 }

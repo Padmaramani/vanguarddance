@@ -41,7 +41,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  app.get("/parents/manage", function(req, res) {
+  app.get("/pmanage", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/parents-manage.html"));
   });
 
