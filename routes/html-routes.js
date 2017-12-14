@@ -17,13 +17,13 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  app.get("/dancers/manage", function(req, res) {
+  app.get("/dmanage", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/dancers-manage.html"));
   });
 
-  app.get("/dancers/add", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/dancers-add.html"));
-  });
+  // app.get("/dancers/add", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/dancers-add.html"));
+  // });
 
   app.get("/dancers/selforupdt", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/dancers-selforupdt.html"));
@@ -35,10 +35,6 @@ module.exports = function(app) {
 
   app.get("/dancers/update", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/dancers-update.html"));
-  });
-
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   app.get("/parents/manage", function(req, res) {
