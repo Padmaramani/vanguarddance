@@ -14,4 +14,55 @@ body, html {
     background-size: cover;
 }
 
+.dancer-disp-bg { 
+    /* The image used */
+    background-image: url("../images/dancer-disp-bg.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parent-disp-bg { 
+    /* The image used */
+    background-image: url("../images/dancer-disp-bg.jpg");
+
+    /* Full height */
+    height: 40%; 
+
+    /* Center and scale the image nicely */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.panel {
+    text-align: center;
+    border: 3px solid #666666;
+}
+
+.panel img {
+    width: 80%;
+    padding-top: 30px;
+}
+
+.jumbotron h1 {
+    text-align: center;
+    /* color: white; */
+}
+
+.modal-header, h4, .close {
+    background-color: #5cb85c;
+    color:white !important;
+    text-align: center;
+    font-size: 22px;
+}
+.modal-footer {
+    background-color: #f9f9f9;
+}
+
 

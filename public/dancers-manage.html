@@ -3,28 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>VDC Parent Communication</title>
-    
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-.modal-header, h4, .close {
-    background-color: #5cb85c;
-    color:white !important;
-    text-align: center;
-    font-size: 30px;
-}
-.modal-footer {
-    background-color: #f9f9f9;
-}
-    </style>
+
 </head>
 
 <body>
@@ -34,15 +24,15 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="#">Dancers</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dancerDisplay">Dancers</a></li>
             <li><a href="#">Parents</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="/dmanage">Manage Dancers</a></li>
-                <li><a href="/parents/manage">Manage Parents</a></li>
+                <li class="active"><a href="/dmanage">Manage Dancers</a></li>
+                <li><a href="/pmanage">Manage Parents</a></li>
                 </ul>
             </li>
         </ul>
@@ -52,10 +42,10 @@
         <div class="container">
                 <h2>Manage Dancers</h2>
                 <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-default btn-lg" id="myBtn">Add Dancer</button>
+                <button type="button" class="btn btn-default btn-lg" id="addDancerBtn">Add Dancer</button>
               
                 <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal fade" id="addDancerModal" role="dialog">
                   <div class="modal-dialog">
                   
                     <!-- Modal content-->
@@ -96,19 +86,23 @@
                                             Senior
                                         </label>
                                 </div>
-                                <div class="form-group">
+                        </div> <!-- end of Year in School -->
+                        <div class="form-group"> <!-- Image path --> 
                                         <label for="imgname">Image Name (ex: image.jpg)</label>
                                         <input type="text" class="form-control" id="imgname" placeholder="Enter image name">
-                                </div>
-                                <div class="form-group"> <!-- Submit Button -->                       
-                                        <button type="submit" class="btn btn-primary">Submit</button> 
-                                </div>        											
                         </div>
+                        <div class="form-group"> <!-- Submit Button -->                       
+                                        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                        </div>        											
+                        <div id="successMessage">
+                            <!-- placeholder for message after successfully adding a new dancer -->
+                        </div>   
                         </form>
                       </div>
                       <div class="modal-footer">
                         <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
                             <span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       </div>
                     </div>
                     
@@ -121,7 +115,7 @@
 </div> <!-- end class="bg" -->
 
 <!-- Custom Script -->
-<script src="js/dancers.js" type="text/javascript"></script>
+<script src="js/dancers-manage.js" type="text/javascript"></script>
 
 </body>
 </html>

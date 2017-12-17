@@ -21,41 +21,17 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/dancers-manage.html"));
   });
 
-  // app.get("/dancers/add", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/dancers-add.html"));
-  // });
+  app.get("/dancerDisplay", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/dancers-display.html"));
+  });  
 
-  app.get("/dancers/selforupdt", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/dancers-selforupdt.html"));
-  });
-
-  app.get("/dancers/selforrem", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/dancers-selforrem.html"));
-  });
-
-  app.get("/dancers/update", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/dancers-update.html"));
-  });
-
-  app.get("/parents/manage", function(req, res) {
+  app.get("/pmanage", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/parents-manage.html"));
   });
 
-  app.get("/parents/add", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/parents-add.html"));
-  });
-
-  app.get("/parents/selforupdt", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/parents-selforupdt.html"));
-  });
-
-  app.get("/parents/selforrem", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/parents-selforrem.html"));
-  });
-
-  app.get("/parents/update", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/parents-update.html"));
-  });
+  app.get("/parentDisplay", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/parents-display.html"));
+  }); 
 
 
 };
