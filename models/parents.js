@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Parents = sequelize.define("Parents", {
+    var Parent = sequelize.define("Parent", {
         parent_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -15,10 +15,14 @@ module.exports = function(sequelize, DataTypes) {
         is_active: {
             type: DataTypes.BOOLEAN,
             defaultValue: true,
+            allowNull: false,
+        },
+        DancerId: {
+            type: DataTypes.INTEGER,
             allowNull: false
         }
     
     })
  
-    return Parents;
+    return Parent;
  };

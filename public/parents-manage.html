@@ -1,35 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-  <meta charset="UTF-8">
-  <title>Pavlova</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="parent-manage.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>VDC Parent Communication</title>
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+    </style>
 </head>
-<body background="../images/dancer-art.jpg">
 
-<div class="bg"></div>
+<body>
 
-<div class="page-header">
-  <h1>Parent management portal</h1>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/dancerDisplay">Dancers</a></li>
+            <li><a href="/parentDisplay">Parents</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="/dmanage">Manage Dancers</a></li>
+                <li class="active"><a href="/pmanage">Manage Parents</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+<div class="container">
+                <h2>Manage Parents</h2>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-default btn-lg" id="addParentBtn">Add Parent</button>
+              
+                <!-- Modal -->
+                <div class="modal fade" id="addParentModal" role="dialog">
+                  <div class="modal-dialog">
+                  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header" style="font-size:30px;padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4>Add Parent</h4>
+                      </div>
+                      <div class="modal-body" style="padding:40px 50px;">
+                        <form id="addParentForm" role="form">
+                          <div class="form-group"> <!-- parent name -->
+                            <label for="prntname"><span class="glyphicon glyphicon-user"></span>Parent Name (First and Last)</label>
+                            <input type="text" class="form-control" id="prntname" placeholder="Enter name">
+                          </div>
+                          <div class="form-group"> <!-- select dancer --> 
+                            <label for="selDancer">Select Dancer</label>
+                            <select class="form-control" id="selDancer" >
+                                <!-- dynamically build option tags with each dancer in the database -->
+                            </select>
+                          </div>
+                          <div class="form-group"> <!-- email -->
+                            <label for="emailaddr">Email</label>
+                            <input type="text" class="form-control" id="emailaddr" placeholder="example@XYZ.com">
+                          </div>
+                          <div class="form-group"> <!-- phone number -->
+                            <label for="phonenum">Phone Number</label>
+                            <input type="text" class="form-control" id="phonenum" placeholder="9999999999 (10 digit)">
+                          </div>
+                          <div class="form-group"> <!-- Submit Button -->                       
+                            <button type="submit" class="btn btn-primary">Submit</button> 
+                          </div> 
+                          <div id="successMessage">
+                              <!-- placeholder for message after successfully adding a new parent -->
+                          </div>        											                   
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div> 
+              </div>
+
 </div>
 
-<div class="row">
-        
-              <!-- First of two columns -->
-              <div class="col-md-6">
-                 <button type="button" class="btn btn-primary btn-lg btn-block">Add a new Parent</button>
-              </div>
-        
-              <!-- Second of two columns -->
-              <div class="col-md-6">
-              </div>
-        
-</div>
+<!-- Custom Script -->
+<script src="js/parents-manage.js" type="text/javascript"></script>
 
-  </body>
+</body>
+</html>

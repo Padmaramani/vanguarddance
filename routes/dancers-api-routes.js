@@ -1,36 +1,15 @@
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
-
-// Dependencies
-// =============================================================
-
-// Requiring our Todo model
+// Requiring our models folder
 var db = require("../models");
 
-// Routes
-// =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the posts
-  // app.get("/api/posts/", function(req, res) {
-  //   db.Post.findAll({})
-  //   .then(function(dbPost) {
-  //     res.json(dbPost);
-  //   });
-  // });
-
-  // Get route for retrieving a single post
-  // app.get("/api/posts/:id", function(req, res) {
-  //   db.Post.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   })
-  //   .then(function(dbPost) {
-  //     res.json(dbPost);
-  //   });
-  // });
+  //GET route for getting all of the dancers
+  app.get("/api/getDancers", function(req, res) {
+    db.Dancer.findAll({})
+    .then(function(dbDancers) {
+      res.json(dbDancers);
+    });
+  });
 
   // POST route for saving a new dancer
   app.post("/api/addDancer", function(req, res) {
@@ -40,33 +19,9 @@ module.exports = function(app) {
       year_in_school: req.body.year_in_school,
       image_path: req.body.image_path
     })
-    .then(function(dbPost) {
-      res.json(dbPost);
+    .then(function(dbDancer) {
+      res.json(dbDancer);
     });
   });
 
-  // DELETE route for deleting posts
-  // app.delete("/api/posts/:id", function(req, res) {
-  //   db.Post.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   })
-  //   .then(function(dbPost) {
-  //     res.json(dbPost);
-  //   });
-  // });
-
-  // PUT route for updating posts
-  // app.put("/api/posts", function(req, res) {
-  //   db.Post.update(req.body,
-  //     {
-  //       where: {
-  //         id: req.body.id
-  //       }
-  //     })
-  //   .then(function(dbPost) {
-  //     res.json(dbPost);
-  //   });
-  // });
 };
