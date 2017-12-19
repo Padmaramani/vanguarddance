@@ -1,3 +1,4 @@
+
 module.exports = function(sequelize, DataTypes) {
     var Dancer = sequelize.define("Dancer", {
         dancer_name: {
@@ -17,19 +18,20 @@ module.exports = function(sequelize, DataTypes) {
             defaultValue: true,
             allowNull: false
         }
+      
      
-    })
+    });
 
+   
     Dancer.associate = function(models) {
-        // Associating Dancer with Parents
-        // When an Dancer is deleted, also delete any associated Parents
+       
         Dancer.hasMany(models.Parent, {
           onDelete: "cascade"
         });
-    };
-    
-    return Dancer;
-  
-  };
+      };
+     
 
+    
+  return Dancer;
+};
   

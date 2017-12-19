@@ -33,5 +33,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/parents-display.html"));
   }); 
 
+  app.get("/contactDisplay", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/contact-display.html"));
+  }); 
+
+  app.get("/resourceDisplay", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/resource-display.html"));
+  }); 
 
 };

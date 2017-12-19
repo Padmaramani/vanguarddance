@@ -29,7 +29,8 @@ body, html {
 
 .parent-disp-bg { 
     /* The image used */
-    background-image: url("../images/dancer-disp-bg.jpg");
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+   /* background-image: url("../images/dancer-disp-bg.jpg");*/
 
     /* Full height */
     height: 40%; 
@@ -52,6 +53,9 @@ body, html {
 
 .jumbotron h1 {
     text-align: center;
+
+    background: transparent;
+    border-color: transparent; 
     /* color: white; */
 }
 
@@ -64,5 +68,13 @@ body, html {
 .modal-footer {
     background-color: #f9f9f9;
 }
+
+
+.navbar {
+
+    background: transparent;
+ 
+
+ }
 
 
